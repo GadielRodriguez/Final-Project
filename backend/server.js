@@ -13,6 +13,8 @@ dotenv.config();
 //to the app application
 const app = express();
 
+app.use(express.json()); //Allows to accept json data in the req.body
+
 //Create a route
 app.post("api/products", async (req, res) => {
   const product = req.body; //user will send this data
