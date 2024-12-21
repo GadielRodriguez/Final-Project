@@ -1,27 +1,24 @@
-//Entry point for our API
-//Path Password
-//MWS4aarKgu37oySX
-
+// Entry point for our API
 import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
-
-//We are importing from the router folder to be use here
-import productRoutes from "./routes/product.route.js";
+import productRoutes from "./routes/product.route.js"; // Corrected path
 
 dotenv.config();
 
-//Creates an instance of express that is assing to
-//to the app application
+// Create an instance of Express
 const app = express();
 
-app.use(express.json()); //Allows to accept json data in the req.body
+// Middleware to parse JSON
+app.use(express.json());
 
-//This makes our code more cleaner as it preffix
-//the use of api/products
+// Route for products
 app.use("/api/products", productRoutes);
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+
+// Start the server
+app.listen(PORT, () => {
   connectDB();
-  console.log("Server started at http://localhost:5000 ");
+  console.log("Server started at http://localhost:" + PORT);
 });
