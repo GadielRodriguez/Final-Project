@@ -1,15 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { Button } from "@chakra-ui/react";
-
+import { Box } from "@chakra-ui/react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CreatePage from "./pages/CreatePage";
+import Navbar from "./Components2/Navbar";
 function App() {
   return (
-    <div>
-      <p>Hey Whats up</p>
-      <Button colorScheme="teal">Hello World</Button>
-    </div>
+    <Box minH={"100vh"}>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/create" element={<CreatePage />} />
+      </Routes>
+    </Box>
   );
 }
 
