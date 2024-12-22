@@ -18,12 +18,14 @@ A modern web application built with **React** and **Chakra UI** to create, manag
 ## Technologies Used
 
 ### Frontend
+
 - **React**: Library for building user interfaces.
 - **Chakra UI**: Component library for fast and responsive design.
 - **Zustand**: Lightweight state management.
 - **Vite**: Fast development build tool.
 
 ### Backend
+
 - **Express.js**: Framework for creating APIs.
 - **MongoDB**: Database for storing product data.
 
@@ -32,19 +34,23 @@ A modern web application built with **React** and **Chakra UI** to create, manag
 ## Installation and Setup
 
 ### Prerequisites
+
 Ensure you have the following installed:
+
 - Node.js
 - npm
 
 ### Steps
 
 1. **Clone the Repository**:
+
    ```bash
    git clone <repository-url>
    cd product-store-app
    ```
 
 2. **Install Dependencies**:
+
    - Navigate to the frontend folder and install dependencies:
      ```bash
      cd frontend
@@ -58,15 +64,19 @@ Ensure you have the following installed:
 
 3. **Setup Environment Variables**:
    Create a `.env` file in the backend folder with the following:
+
    ```env
    MONGO_URI=your_mongodb_connection_string
    PORT=5001
    ```
 
 4. **Run the App**:
-   
-     npm run dev
-     ```
+
+   npm run dev
+
+   ```
+
+   ```
 
 5. **Open in Browser**:
    Visit `http://localhost:5173` to view the app.
@@ -76,15 +86,19 @@ Ensure you have the following installed:
 ## API Endpoints
 
 ### Base URL
+
 ```
 http://localhost:5000/api/products
 ```
 
 ### Endpoints
+
 1. **Get All Products**:
+
    - **GET** `/`
 
 2. **Create a Product**:
+
    - **POST** `/`
    - **Body**:
      ```json
@@ -96,6 +110,7 @@ http://localhost:5000/api/products
      ```
 
 3. **Update a Product**:
+
    - **PUT** `/:id`
    - **Body**:
      ```json
@@ -111,7 +126,26 @@ http://localhost:5000/api/products
 
 ---
 
+## Adding a Product Using the UI
+
+1. **Navigate to the Create Page**:
+
+   - Open the app in your browser and navigate to `/create` by clicking the "Add Product" button in the navbar.
+
+2. **Fill in the Product Details**:
+
+   - Enter the product name, price, and a valid image URL in the respective input fields.
+
+3. **Submit the Product**:
+
+   - Click the "Create Product" button.
+   - A success message will appear, and the product will be added to the list.
+
+4. **View the Product**:
+   - Navigate back to the home page (`/`) to see your newly created product displayed.
+
 ## Project Structure
+
 ```
 product-store-app/
 ├── backend/
@@ -149,6 +183,3 @@ product-store-app/
 - Add image upload functionality.
 
 ---
-
-
-
